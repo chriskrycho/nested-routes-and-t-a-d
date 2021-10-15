@@ -1,5 +1,13 @@
-{{page-title "NestedRoutesAndTAD"}}
+{{page-title 'NestedRoutesAndTAD'}}
 
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Routes</h2>
 
+<ul>
+  <li>
+    <LinkTo @route="foo">foo</LinkTo>
+  </li>
+  <li>
+    <LinkTo @route="foo.bar">foo/bar</LinkTo>
+  </li>
+</ul>
 {{outlet}}

@@ -1,0 +1,13 @@
+{{page-title "Foo"}}
+
+{{#if @model.isResolved}}
+  <p><code>@model.a</code> in <code>foo</code>: {{@model.value.a}}</p>
+  <p><code>@model.b</code> in <code>foo</code>: {{@model.value.b}}</p>
+
+  {{!-- Fall through into child route! --}}
+  {{outlet}}
+{{else if @model.isPending}}
+  <Loading @routeName='foo' />
+{{else if @model.isRejected}}
+  <Error @reason={{@model.error}} />
+{{/if}}
